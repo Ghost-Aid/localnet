@@ -1,0 +1,66 @@
+#!/bin/bash
+
+
+stty cols 80
+
+space(){
+
+# create space for further use
+echo 
+}
+
+space2(){
+
+# create space for further use
+echo 
+echo 
+}
+
+
+#===================<>
+display_router(){
+
+# this function will display ASCII router images
+sudo  gum style --foreground 50  " 
+
+                    ⠀⠀⠀⠀⠀⣶⣗⡇⠀⠀⠀⠀⠀⠀⠐⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢰⠀⠀⠀⠀⠀⠀⠀⢸⣾⡲⠀⠀⠀⠀⠀⠀
+                     ⠀⠀⠀⠀⢵⣟⣖⠀⠀⠀⠀⠀⠀⠀⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢼⠀⠀⠀⠀⠀⠀⠀⣞⣷⡣⠀⠀⠀⠀⠀⠀
+                    ⠀⠀⠀⠀⠀⠸⣞⣷⠀⠀⠀⠀⠀⠀⠀⡯⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣟⠀⠀⠀⠀⠀⠀⠠⣟⡷⡁⠀⠀⠀⠀⠀⠀
+                    ⠀⠀⠀⠀⠀⠀⡿⡾⡅⠀⠀⠀⠀⠀⠀⣯⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢐⡗⠀⠀⠀⠀⠀⠀⣸⢿⡝⠀⠀⠀⠀⠀⠀⠀
+                    ⠀⠀⠀⠀⠀⠀⢹⣟⡧⠀⠀⠀⠀⠀⠀⢺⡁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢰⠇⠀⠀⠀⠀⠀⠀⣯⢿⡊⠀⠀⠀⠀⠀⠀⠀
+                    ⠀⠀⠀⠀⠀⠀⠨⣷⣻⠄⠀⠀⠀⠀⠀⢸⡆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢼⡃⠀⠀⠀⠀⠀⢰⣻⢯⠂⠀⠀⠀⠀⠀⠀⠀
+                    ⠀⠀⠀⠀⠀⠀⠀⣟⣾⠥⠀⠀⠀⣀⣄⣼⣳⢤⣴⣤⢦⠦⠦⡦⢦⢦⠦⡦⡤⣤⢤⢤⣻⢥⡠⡀⠀⠀⠀⣪⡿⡝⠀⠀⠀⠀⠀⠀⠀⠀
+                    ⠀⠀⠀⠀⠀⠀⠀⢸⣗⣯⠀⡠⡪⢮⣺⣺⣺⣻⢞⡾⡏⡜⣜⢼⢕⡷⡽⣾⡝⣎⢗⡽⣝⢕⢇⡇⡇⡄⢀⣯⢿⠅⠀⠀⠀⠀⠀⠀⠀⠀
+                    ⠀⠀⠀⠀⠀⠀⠐⣿⣞⡧⡣⣝⠵⣕⢵⡳⡽⡽⣝⢗⣽⣺⠽⠽⡽⣿⣿⣯⢪⢳⡹⡜⡕⡕⡕⡕⡜⣼⢯⣟⠀⠀⠀⠀⠀⠀⠀⠀⠀
+                    ⠀⠀⠀⠀⠀⠀⠀⠀⡱⡕⡿⣝⡮⣫⢮⢳⡹⣺⢝⣗⣿⣽⣾⣿⣿⣿⢿⣻⢿⡸⡕⡇⡇⡇⡏⡮⣺⣪⢯⠣⡃⠀⠀⠀⠀⠀⠀⠀⠀⠀
+                    ⠀⠀⠀⠀⠀⠀⠀⣜⢜⣜⣝⡵⣽⣸⣜⣜⣜⣎⣗⣵⣣⣗⣵⣣⣳⣜⣕⣕⣕⣜⣌⣎⣢⣱⡰⣱⣸⢜⡜⡅⣊⠢⠀⠀⠀⠀⠀⠀⠀⠀
+                    ⠀⠀⠀⠀⠀⠀⠀⠀⢉⢘⢷⢿⣻⣷⢿⣯⣿⣯⣿⣽⣟⣿⣻⣟⣿⣻⣟⣿⣻⣿⣽⣯⣿⣾⢿⣯⣿⣻⡽⡩⠈⠀⠀⠀⠀⠀⠀⠀⠀⠀
+                   ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠁⠑⠉⠑⠉⠍⠊⠊⠊⠊⠊⠑⠙⠘⠑⠙⠘⠑⠉⠃⠃⠃⠃⠃⠩⠉⠊⠊⠡⠑⠐⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+
+                                    [ made by ZOE ]
+"
+# callback function of find_my_ip
+find_my_local_ip
+}
+
+
+find_my_local_ip(){
+
+# this function will store  local ip 
+ip=$( ifconfig |grep inet |head -1 |awk '{print $2}')
+
+# callback function of 
+main_function
+}
+
+
+main_function(){
+
+# this function will display all the ip and mac
+    gum style --foreground '#00C9A7' "  ------------------------------------------------------------------"
+    echo                             "  Ip Address  |     Mac Address        |   Device  "
+    gum style --foreground '#00C9A7' "  -------------------------------------------------------------------"
+    sudo arp-scan -l | grep "192.168.0" |grep -v "$ip"
+}
+
+display_router
